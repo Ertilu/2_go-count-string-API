@@ -119,3 +119,10 @@ func TestServer(t *testing.T) {
 		}
 	})
 }
+
+func BenchmarkCount(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		input := "aiueo"
+		c.Count(input)
+	}
+}
